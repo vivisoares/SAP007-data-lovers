@@ -9,7 +9,7 @@ body{
 }
 
 .border{
-  padding: 0px 50px;
+  padding: 0% 5%;
   list-style: none;
 }
 
@@ -44,8 +44,10 @@ body{
 
 }
 
+/* BANNER */
+
 .image-bg{
-  width: 99%;
+  width: 100%;
 }
 
 
@@ -108,7 +110,5 @@ body{
     text-align: center;
   }
 
-  .image {
-    width: 20%;
-  }
+  max-width: 45%;
 }

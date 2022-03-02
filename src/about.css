@@ -1,10 +1,53 @@
+*{  margin: 0;}    /* ZEREI MARGENS */
 
-article main {
-  margin: 0;
-  padding: 0;
+body{
+    font-size: 1.0em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #DEEFE7;
+}
+
+.border{
+  padding: 0% 5%;
+  list-style: none;
+}
+
+.center{
+  text-align: center;
 }
 
 
+/* NAVBAR */
+
+.navbar {
+  list-style:none;
+  background-color: #159A9C;
+  overflow: auto;
+
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 15px;
+  text-align: center;
+
+}
+
+.navbar a:hover {
+  background-color: #55ABAB;
+}
+
+.active {
+  background-color: #159A9C;
+}
+
+/* BANNER */
+
+.image-bg{
+  width: 100%;
+}
 
 /* CONTEUDO */
 
@@ -18,38 +61,49 @@ section {
   text-align: justify;
 }
 
-
 .aboutTheShow{
   background-color: whitesmoke;
-  font-size: 16px;
+  font-size: 1em;
   text-align: justify;
-  text-decoration: solid;
-  margin: 1%;
-  padding: 0% 5% 3% 2%;
+  margin: 7px;
+  padding: 0% 4% 0% 2%;
   float: left;
   border: transparent thin solid;
-  width: 90%;
+
 }
 
 .aboutTheShow h3{
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 1%;
+  margin-top: 4%;
 }
 
  .aboutTheShow img{
   max-width: 45%;
 }
 
-#developerCredits {
-  width: 100%;
-  height: 3%;
-  margin-top: 31%;
-  position: absolute;
-  background-color:#ecd356e7;
-  color: #2b1449;
-  letter-spacing: 1px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: bold;
+
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .navbar a {
+    float: none;
+    display: block;
+  }
+
+  #demo{
+    text-align: center;
+  }
+
+  #container {
+    text-align: center;
+  }
+
+  .aboutTheShow{
+    padding-bottom: 2%;
+    padding-right: 2%;
+  }
+
 }

@@ -2,9 +2,10 @@
 
 body{
     font-size: 1.0em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #DEEFE7;
-    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .border{
@@ -12,18 +13,12 @@ body{
   list-style: none;
 }
 
-.center{
-  text-align: center;
-}
-
-
 /* NAVBAR */
 
 .navbar {
   list-style:none;
   background-color: #159A9C;
   overflow: auto;
-
 }
 
 .navbar a {
@@ -37,34 +32,22 @@ body{
 }
 
 .navbar a:hover {
-  background-color: #55ABAB;
+  background-color: hsl(180, 34%, 50%);
 }
 
 .active {
   background-color: #159A9C;
 }
 
-    /* BANNER */
 
-.banner-ram{
-  width: 100%;
-  border-bottom: 5px solid #4e29;
 
-}
 
-/* FLEXBOX  aqui é tela cheia*/
 
-.row{
-  display: flex;
-  padding: 1% 4%;
-  justify-content: space-between;
-}
-
-/* FLEXBOX  aqui é tela celular*/
 
 @media (max-width: 600px) {
   .row {
-
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
 
   .navbar a {
@@ -72,9 +55,15 @@ body{
     display: block;
   }
 
-  .image {
-    width: 40%;
-    padding-left: 35%;
+  #demo{
+    text-align: center;
   }
 
+  #container {
+    text-align: center;
+  }
+
+  .image {
+    width: 20%;
+  }
 }
