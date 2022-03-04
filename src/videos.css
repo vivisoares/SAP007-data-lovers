@@ -17,13 +17,14 @@ body{
 
 .navbar {
   list-style:none;
-  background-color: #159A9C;
+  background-color:  #0adcde;
   overflow: auto;
+
 }
 
 .navbar a {
   float: left;
-  color: white;
+  color: #8b3986;
   text-decoration: none;
   font-weight: 600;
   padding: 15px;
@@ -32,12 +33,14 @@ body{
 }
 
 .navbar a:hover {
-  background-color: hsl(180, 34%, 50%);
+  background-color: #f0e948;
+  color: #199b25;
 }
 
 .active {
-  background-color: #159A9C;
+  background-color: #dfa8dc;
 }
+
 
 
 
