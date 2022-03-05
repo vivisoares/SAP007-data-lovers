@@ -6,17 +6,18 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="shortcut icon" href="./img/favicon.ico">
       <link rel="stylesheet" href="explore.css" />
-      <title>Explorar</title>
+      <script src="main.js" type="module"></script>
+      <title> Personagens </title>
   </head>
 <body>
 
      <!--BARRA DE NAV  -->
     <nav class="navbar">
       <ul class="border">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="about.html">Rick and Morty</a></li>
-      <li><a href="explore.html"> Personagens</a></li>
-      <li><a href="videos.html"> Maratonar</a></li>
+      <li><a class="active" href="index.html"> Home </a></li>
+      <li><a href="about.html"> Rick and Morty </a></li>
+      <li><a href="explore.html"> Personagens </a></li>
+      <li><a href="videos.html"> Maratonar </a></li>
       </ul>
     </nav>
 
@@ -28,8 +29,8 @@
     <main>
 
       <div id="container">
-        <label for="cards">Filtro: </label>
-        <select name="filtar" id="filtro">
+        <label for="cards">Espécie: </label>
+        <select name="filter" id="species">
             <option value="Human">Humano</option>
             <option value="Humanoid">Humanóide</option>
             <option value="Alien">Alien</option>
@@ -42,15 +43,19 @@
         </select>
       </div>
 
-      <div class="card-board">
-        <p id="demo"></p>
+      <div id="container">
+        <label for="cards">Status: </label>
+        <select name="filter" id="status">
+            <option value="Alive">Vivo</option>
+            <option value="Dead">Morto</option>
+            <option value="unknown">Desconhecido</option>
+        </select>
       </div>
 
-      <script src="main.js" type="module"></script>
-
+      <div class="card-board">
+        <p id="cardsBoard"></p>
+      </div>
     </main>
-
-    <script src="main.js" type="module"></script>
 
 </body>
 </html>
