@@ -24,7 +24,7 @@ body{
 
 .navbar a {
   float: left;
-  color: #8b3986;
+  color: #8b3986; 
   text-decoration: none;
   font-weight: 600;
   padding: 15px;
@@ -34,7 +34,7 @@ body{
 
 .navbar a:hover {
   background-color: #f0e948;
-  color: #199b25;
+  color: #8b3986; 
 }
 
 .active {
@@ -42,7 +42,7 @@ body{
 }
 
 .box{
-  background-color:#1e2838;
+  background-color:#f0e948;
 
 }
 
@@ -57,7 +57,8 @@ body{
 
 #container {
   padding: 20px 85px 20px 85px;
-
+  display: inline-table;
+  font-size: 15px;
 }
 
 /* CARDS */
