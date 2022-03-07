@@ -21,7 +21,6 @@ const printingAllCards = (characters) => {
 }
 
 // FILTRAGEM POR ESPÉCIES
-
 const speciesFilter = document.getElementById("species"); // Const que armazena o ID do select específico
 speciesFilter.addEventListener("change", function (event){// Ao ouvir o evento e armazenar no ID
 
@@ -32,15 +31,24 @@ speciesFilter.addEventListener("change", function (event){// Ao ouvir o evento e
 
 
 // FILTRAGEM POR STATUS
-
   const statusFilter = document.getElementById("status");
   statusFilter.addEventListener("change", function (event){
 
-    const results = filter(data.results, event.target.value);
-    //console.log(results);
-    printingAllCards(results); // Armazenou o item.species do rickandmorty.js
+    const statusCards = filter(data.results, event.target.value);
+    printingAllCards(statusCards);
   })
     printingAllCards(data.results);
+
+
+// ORDENAÇÃO
+const statusOrdination = document.getElementById("ordination");
+statusOrdination.addEventListener("change", function (event){
+
+  const results = filter(data.results, event.target.value);
+  printingAllCards(results);
+})
+  printingAllCards(data.results);
+
 
 
 
