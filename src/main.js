@@ -1,24 +1,26 @@
 import data from "./data/rickandmorty/rickandmorty.js";
-import filter from './data.js';
+import {filter, ordination} from './data.js'; //ADD AS FUNÇÕES DO DATA
+
 
 
 
 // EXIBIR OS CARDS
 const printingAllCards = (characters) => {
   let showingCards = ""; // Let que armazenará cada elemento da array que corresponder com a condição
-  for (let character of characters) { // Character é a variavel índice usada para iniciar o looping
-    showingCards += character = `<div class="cards">
+  for (let character of characters) {
+    showingCards += character = `<dl class="cards">
     <img src="${character.image}" class="image-card">
-    <p class="p-name-card">${character.name}</p>
-    <p class="p-card">Status: ${character.status}</p>
-    <p class="p-card">Especie: ${character.species}</p>
-    <p class="p-card">Gênero: ${character.gender}</p>
-    <p class="p-card">Origen: ${character.origin.name}</p>
-    </div>`;
+    <dt class="p-name-card">${character.name}</dt>
+    <dd class="p-card">Status: ${character.status}</dd>
+    <dd class="p-card">Especie: ${character.species}</dd>
+    <dd class="p-card">Gênero: ${character.gender}</dd>
+    <dd class="p-card">Origen: ${character.origin.name}</dd>
+    </dl>`;
   }
 
   document.getElementById("cardsBoard").innerHTML = showingCards; // Imprimir no HTML
 }
+
 
 // FILTRAGEM POR ESPÉCIES
 const speciesFilter = document.getElementById("species"); // Const que armazena o ID do select específico
@@ -37,18 +39,14 @@ speciesFilter.addEventListener("change", function (event){// Ao ouvir o evento e
     const statusCards = filter(data.results, event.target.value);
     printingAllCards(statusCards);
   })
-    printingAllCards(data.results);
 
 
 // ORDENAÇÃO
-const statusOrdination = document.getElementById("ordination");
-statusOrdination.addEventListener("change", function (event){
+const ordinationAz = document.querySelector("#ordination");
+ordinationAz.addEventListener("change", function(event){
 
-  const results = filter(data.results, event.target.value);
-  printingAllCards(results);
+  const characters = ordination(data.results, event.target.value);
+  printingAllCards(characters);
 })
-  printingAllCards(data.results);
-
-
 
 

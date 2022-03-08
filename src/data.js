@@ -29,10 +29,19 @@ export const filter = (characters, characteristics) => {
       return results
     }
     })
-    return results.sort((a, b) => (a.name > b.name ? 1 : -1)) // Metodo Sort ordena a array dentro da própria array.
+    return results
+  };
+
+
+
+
+
+export const ordination = (characters, order) =>{
+  if(order === "AZ") {
+    return characters.sort((a, b) => (a.name > b.name ? 1 : -1))
+} else {
+    return characters.sort((a, b) => (a.name > b.name ? -1 : 1))
   }
-
-
-export default filter
+}
 
 

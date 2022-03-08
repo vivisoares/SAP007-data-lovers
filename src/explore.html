@@ -25,10 +25,10 @@
   <header>
     <div class="container">
       <img src="./img/bg-1.png" class="image-bg" alt="Pesquisar Personagem">
-      <div class="center"><label for="search" class="search">Pesquisar personagem:</label>
+      <!-- <div class="center"><label for="search" class="search">Pesquisar personagem:</label>
         <input type="search" id="search">
         <button type="submit">Buscar</button>
-      </div>
+      </div> -->
     </div>
   </header>
 
@@ -38,7 +38,8 @@
 
       <div>
         <label for="cards">Espécie: </label>
-        <select name="filter" id="species">
+        <select name="filter" id="species" title="specie">
+            <option selected disabled value="">Todos</option>
             <option value="Human">Humano</option>
             <option value="Humanoid">Humanóide</option>
             <option value="Alien">Alien</option>
@@ -54,7 +55,8 @@
         <!--BARRA DE FILTRAGEM POR STATUS -->
       <div>
         <label for="cards">Status: </label>
-        <select name="filter" id="status">
+        <select name="filter" id="status" title="status">
+            <option selected disabled value=""></option>
             <option value="Alive">Vivo</option>
             <option value="Dead">Morto</option>
             <option value="unknown">Desconhecido</option>
@@ -64,9 +66,10 @@
         <!--BARRA DE FILTRAGEM POR ORDENAÇÃO -->
       <div>
         <label for="cards">Ordem Alfabética: </label>
-        <select name="filter" id="ordination">
-          <option value="A-Z">A - Z</option>
-          <option value="Z-A">Z - A</option>
+        <select name="filter" id="ordination" title="order">
+          <option selected disabled value=""></option>
+          <option value="AZ">A - Z</option>
+          <option value="ZA">Z - A</option>
         </select>
       </div>
       </div>
