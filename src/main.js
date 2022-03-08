@@ -1,12 +1,9 @@
 import data from "./data/rickandmorty/rickandmorty.js";
-import {filter, ordination} from './data.js'; //ADD AS FUNÇÕES DO DATA
-
-
-
+import {filter, ordination} from './data.js'; 
 
 // EXIBIR OS CARDS
 const printingAllCards = (characters) => {
-  let showingCards = ""; // Let que armazenará cada elemento da array que corresponder com a condição
+  let showingCards = ""; 
   for (let character of characters) {
     showingCards += character = `<dl class="cards">
     <img src="${character.image}" class="image-card">
@@ -17,20 +14,17 @@ const printingAllCards = (characters) => {
     <dd class="p-card">Origen: ${character.origin.name}</dd>
     </dl>`;
   }
-
-  document.getElementById("cardsBoard").innerHTML = showingCards; // Imprimir no HTML
+  document.getElementById("cardsBoard").innerHTML = showingCards; 
 }
-
+printingAllCards(data.results);
 
 // FILTRAGEM POR ESPÉCIES
-const speciesFilter = document.getElementById("species"); // Const que armazena o ID do select específico
-speciesFilter.addEventListener("change", function (event){// Ao ouvir o evento e armazenar no ID
+const speciesFilter = document.getElementById("species");
+speciesFilter.addEventListener("change", function (event){
 
-    const speciesCards = filter(data.results, event.target.value); // Const que armazena e busca o resultado da const filter
-    printingAllCards(speciesCards); // Armazenou o item.species do rickandmorty.js
-})
-  printingAllCards(data.results);
-
+  const speciesCards = filter(data.results, event.target.value); 
+  printingAllCards(speciesCards); 
+  })
 
 // FILTRAGEM POR STATUS
   const statusFilter = document.getElementById("status");
@@ -47,6 +41,6 @@ ordinationAz.addEventListener("change", function(event){
 
   const characters = ordination(data.results, event.target.value);
   printingAllCards(characters);
-})
+  })
 
 

@@ -37,27 +37,28 @@ body{
 }
 
 .navbar a:hover {
+  background-color: #dfa8dc;
+}
+
+.active {
   background-color: #f0e948;
   color: #8b3986;
 }
 
-.active {
-  background-color: #0adcde;
-}
 
     /* BANNER */
 
 .banner-ram{
   width: 100%;
   border-bottom: 5px solid #4e29;
-
+  border-top: 4px solid #f0e948;
 }
 
 /* FLEXBOX  aqui é tela cheia*/
 
 .row{
   display: flex;
-  padding: 1% 4%;
+  padding: 0% 4%;
   justify-content: space-between;
 }
 
