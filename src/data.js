@@ -36,12 +36,13 @@ export const filter = (characters, characteristics) => {
 
 
 
-export const ordination = (characters, order) =>{
+export const ordination = (characters, order) => {
   if(order === "AZ") {
     return characters.sort((a, b) => (a.name > b.name ? 1 : -1))
 } else {
     return characters.sort((a, b) => (a.name > b.name ? -1 : 1))
   }
 }
+
 
 
