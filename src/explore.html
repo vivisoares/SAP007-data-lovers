@@ -11,26 +11,35 @@
   </head>
 <body>
 
-     <!--BARRA DE NAV  -->
-    <nav class="navbar">
-      <ul class="border">
-      <li><a class="active" href="index.html"> Home </a></li>
-      <li><a href="about.html"> Rick and Morty </a></li>
-      <li><a href="explore.html"> Personagens </a></li>
-      <li><a href="videos.html"> Maratonar </a></li>
-      </ul>
-    </nav>
+  <!--BARRA DE NAV  -->
+  <nav class="navbar">
+    <ul class="border">
+    <li><a class="active" href="index.html"> Home </a></li>
+    <li><a href="about.html"> Rick and Morty </a></li>
+    <li><a href="explore.html"> Personagens </a></li>
+    <li><a href="videos.html"> Maratonar </a></li>
+    </ul>
+  </nav>
 
-    <header class="rick-and-morty">
-      <div class="box"><img src="./img/bg-1.png" class="image-bg" alt="banner"></div>
-    </header>
+  <!--BANNER -->
+  <header>
+    <div class="container">
+      <img src="./img/bg-1.png" class="image-bg" alt="Pesquisar Personagem">
+      <!-- <div class="center"><label for="search" class="search">Pesquisar personagem:</label>
+        <input type="search" id="search">
+        <button type="submit">Buscar</button>
+      </div> -->
+    </div>
+  </header>
 
-      <!--BARRA DE FILTRAGEM  -->
+    <!--BARRA DE FILTRAGEM POR ESPÉCIE -->
     <main>
+      <div id="filterbar">
 
-      <div id="container">
+      <div>
         <label for="cards">Espécie: </label>
-        <select name="filter" id="species">
+        <select name="filter" id="species" title="specie">
+            <option selected disabled value="">Todos</option>
             <option value="Human">Humano</option>
             <option value="Humanoid">Humanóide</option>
             <option value="Alien">Alien</option>
@@ -43,18 +52,32 @@
         </select>
       </div>
 
-      <div id="container">
+        <!--BARRA DE FILTRAGEM POR STATUS -->
+      <div>
         <label for="cards">Status: </label>
-        <select name="filter" id="status">
+        <select name="filter" id="status" title="status">
+            <option selected disabled value=""></option>
             <option value="Alive">Vivo</option>
             <option value="Dead">Morto</option>
             <option value="unknown">Desconhecido</option>
         </select>
       </div>
 
+        <!--BARRA DE FILTRAGEM POR ORDENAÇÃO -->
+      <div>
+        <label for="cards">Ordem Alfabética: </label>
+        <select name="filter" id="ordination" title="order">
+          <option selected disabled value=""></option>
+          <option value="AZ">A - Z</option>
+          <option value="ZA">Z - A</option>
+        </select>
+      </div>
+      </div>
+
       <div class="card-board">
         <p id="cardsBoard"></p>
       </div>
+
     </main>
 
 </body>
