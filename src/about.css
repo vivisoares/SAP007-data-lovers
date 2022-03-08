@@ -3,7 +3,8 @@
 body{
     font-size: 1.0em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #DEEFE7;
+    background-image: url(img/wallpaper.png);
+    background-repeat:repeat;
 }
 
 .border{
@@ -36,19 +37,22 @@ body{
 }
 
 .navbar a:hover {
+  background-color: #dfa8dc;
+}
+
+.active {
   background-color: #f0e948;
   color: #8b3986;
 }
 
-.active {
-  background-color: #0adcde;
-}
 
 /* BANNER */
 
 .image-bg{
-  width: 100%;
-}
+    width: 100%;
+    border-bottom: 5px solid #4e29;
+    border-top: 4px solid #f0e948;
+  }
 
 /* CONTEUDO */
 
@@ -62,20 +66,39 @@ section {
   text-align: justify;
 }
 
-.aboutTheShow{
-  background-color: whitesmoke;
-  font-size: 1em;
-  text-align: justify;
-  margin: 7px;
-  padding: 0% 4% 0% 2%;
-  float: left;
-  border: transparent thin solid;
-
+.title {
+  font-size: 1.5em;
+  margin-bottom: 1%;
+  font-style: oblique;
+  font-style: italic;
+  text-align: center;
+  margin-top: 3%;
 }
 
-.aboutTheShow h3{
-  text-align: center;
-  margin-top: 4%;
+.text{
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+.aboutTheShow{
+  background-color: #f7e8fa;
+  border-radius: 10px;
+  font-size: 1em;
+  text-align: justify;
+  margin: 2px;
+  padding: 0% 4% 2% 4%;
+  float: left;
+  border: transparent thin solid;
+}
+
+.imgaboutTheShow{
+  border-radius: 20px;
+  margin-right: 4%;
+  margin-top: 1%;
+  float: left;
+  border: #0adcde;
+  border-style:groove;
+
 }
 
  .aboutTheShow img{
