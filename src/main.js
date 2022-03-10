@@ -24,6 +24,7 @@ speciesFilter.addEventListener("change", function (event){
 
   const speciesCards = filter(data.results, event.target.value); 
   printingAllCards(speciesCards); 
+
   })
 
 // FILTRAGEM POR STATUS
@@ -43,4 +44,16 @@ ordinationAz.addEventListener("change", function(event){
   printingAllCards(characters);
   })
 
+// VALOR AGREGADO
 
+
+// const charactersSpeciesAverageTotal = (characters, id) => {
+// let showingAverage = ""; 
+// for (let character of characters) {
+//   showingAverage += character = `<dl class="cards">
+//   <dd class="p-card">Origen: ${character.id}</dd>
+//   </dl>`;
+// }
+// document.getElementById("cardsBoard").innerHTML = showingAverage; 
+// }
+// charactersSpeciesAverageTotal(data.results);

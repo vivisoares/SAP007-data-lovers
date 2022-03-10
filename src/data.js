@@ -1,5 +1,6 @@
 
 export const filter = (characters, characteristics) => {
+  // const resultTotalCharacters = results 
   const results = characters.filter((item) => {
     if (characteristics === item.species) {
     return item.species === characteristics;
@@ -10,6 +11,7 @@ export const filter = (characters, characteristics) => {
     } else if (characteristics === item.name){
       return results
     }
+      // else if (characteristics === item.id)
     })
     return results
   };
@@ -23,5 +25,5 @@ export const ordination = (characters, order) => {
   }
 }
 
-
-
+// export const average = (characters, id => {
+//   const resultTotalCharacters = item.id  
