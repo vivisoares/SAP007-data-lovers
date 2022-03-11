@@ -1,5 +1,6 @@
 
 export const filter = (characters, characteristics) => {
+  // const resultTotalCharacters = results 
   const results = characters.filter((item) => {
     if (characteristics === item.species) {
     return item.species === characteristics;
@@ -23,5 +24,7 @@ export const ordination = (characters, order) => {
   }
 }
 
-
-
+export const average = (total, portion) => {
+  const averageCalculation = Math.round((portion * 100 / total))
+  return averageCalculation
+}

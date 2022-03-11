@@ -1,5 +1,5 @@
 import data from "./data/rickandmorty/rickandmorty.js";
-import {filter, ordination} from './data.js'; 
+import {filter, ordination, average } from './data.js'; 
 
 // EXIBIR OS CARDS
 const printingAllCards = (characters) => {
@@ -23,7 +23,9 @@ const speciesFilter = document.getElementById("species");
 speciesFilter.addEventListener("change", function (event){
 
   const speciesCards = filter(data.results, event.target.value); 
+  averageCalculation.innerHTML = `Essa categoria representa ${average(data.results.length, speciesCards.length)}% de todos os personagens`
   printingAllCards(speciesCards); 
+
   })
 
 // FILTRAGEM POR STATUS
@@ -31,6 +33,7 @@ speciesFilter.addEventListener("change", function (event){
   statusFilter.addEventListener("change", function (event){
 
     const statusCards = filter(data.results, event.target.value);
+    averageCalculation.innerHTML = `Essa categoria representa ${average(data.results.length, statusCards.length)}% de todos os personagens`
     printingAllCards(statusCards);
   })
 
@@ -43,4 +46,4 @@ ordinationAz.addEventListener("change", function(event){
   printingAllCards(characters);
   })
 
-
+// VALOR AGREGADO
