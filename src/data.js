@@ -5,12 +5,8 @@ export const filter = (characters, characteristics) => {
     if (characteristics === item.species) {
     return item.species === characteristics;
 
-    } else if (characteristics === item.status){
+    } else (characteristics === item.status)
       return item.status === characteristics
-
-    } else if (characteristics === item.name){
-      return results
-    }
     })
     return results
   };
