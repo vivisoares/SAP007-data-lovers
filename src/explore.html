@@ -22,7 +22,7 @@
     </nav>
 
     <header class="rick-and-morty">
-      <div class="box"><img src="./img/bannerpersonas.png" class="image-bg" alt="banner"></div>
+      <div class="box">  <img src="./img/bannerpersonas.png" class="image-bg" alt="banner"></div>
     </header>
 
       <!--BARRA DE FILTRAGEM  -->
@@ -54,12 +54,17 @@
         </select>
 
         <label for="cards" class="filterName">Ordem Alfabética: </label>
-        <select name="filter" id="ordination" title="order">
+        <select name="filter" id="ordination" title="order" class="selectorButton">
           <option selected disabled value=""></option>
           <option value="AZ">A - Z</option>
           <option value="ZA">Z - A</option>
         </select>
       </section>
+
+     <div> <p id="averageCalculation" class="center" > Você está visualizando 100% dos personagens  </p> </label>
+      </div>
+
+      <!-- </div> -->
 
       <div class="card-board">
         <p id="cardsBoard"></p>
