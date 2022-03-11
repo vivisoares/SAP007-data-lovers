@@ -1,47 +1,6 @@
 //import { example, anotherExample } from '../src/data.js';
 import { describe } from 'eslint/lib/rule-tester/rule-tester';
-import { filter } from '../src/data.js';
-
-// describe('filter', () => {
-//   it('is a function', () => {
-//     expect(typeof example).toBe('function');
-//   });
-
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
-
-
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
-
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
-
-//TESTES
-
-
-
-
-// test('adds 1 + 2 to equal 3', () => {
-//   expect(sum(1, 2)).toBe(3);
-// });
-
-// test('atribuição de objeto', () => {
-//   const data = {one: 1};
-//   data['two'] = 2;
-//   expect(data).toEqual({one: 1, two: 2});
-// });
-
-
-
-//ORDENAÇÃO
-
+import { filter, ordination } from '../src/data.js';
 
 const personagens = [
   {
@@ -78,24 +37,12 @@ const personagens = [
   }]
 
 
-// const nomesPersonagens = [
-//   {"name": "Rick Sanchez"},
-//   {"name": "Morty Smith"},
-//   {"name": "Summer Smith"},
-//   {"name": "Beth Smith"},
-// ]
-
-
-// describe('function ordination()', () => {
-//   it('is a function', () => {
-//     expect(typeof ordination).toBe('function');
-//   });
-
-// //     it('returns `example`', () => {
-// //     expect(ordination()).toBe('example');
-// //   });
-// // });
-
+const nomesPersonagens = [
+  {"name": "Abadango Cluster Princess"},
+  {"name": "Mechanical Morty"},
+  {"name": "Kyle"},
+  {"name": "Beth Smith"},
+]
 
 
 describe('function filter()', () => {
@@ -119,3 +66,16 @@ describe('function filter()', () => {
     expect(expected[1].status).toEqual('Alive');
   });
 
+describe('function ordination()', () => {
+  it('is a function', () => {
+    expect(typeof ordination).toBe('function');
+  });
+
+    it('ordenação de A-Z', () => {
+    expect(ordination(nomesPersonagens, "AZ")).toStrictEqual([nomesPersonagens[0], nomesPersonagens[3], nomesPersonagens[2], nomesPersonagens[1]]);
+  });
+
+    it('ordenação de Z-A', () => {
+      expect(ordination(nomesPersonagens, "ZA")).toStrictEqual([nomesPersonagens[1], nomesPersonagens[2], nomesPersonagens[3], nomesPersonagens[0]]);
+    });
+  });
