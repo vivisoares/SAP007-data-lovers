@@ -1,9 +1,9 @@
 import data from "./data/rickandmorty/rickandmorty.js";
-import {filter, ordination} from './data.js'; 
+import {filter, ordination} from './data.js';
 
 // EXIBIR OS CARDS
 const printingAllCards = (characters) => {
-  let showingCards = ""; 
+  let showingCards = "";
   for (let character of characters) {
     showingCards += character = `<dl class="cards">
     <img src="${character.image}" class="image-card">
@@ -14,7 +14,7 @@ const printingAllCards = (characters) => {
     <dd class="p-card">Origen: ${character.origin.name}</dd>
     </dl>`;
   }
-  document.getElementById("cardsBoard").innerHTML = showingCards; 
+  document.getElementById("cardsBoard").innerHTML = showingCards;
 }
 printingAllCards(data.results);
 
@@ -22,8 +22,8 @@ printingAllCards(data.results);
 const speciesFilter = document.getElementById("species");
 speciesFilter.addEventListener("change", function (event){
 
-  const speciesCards = filter(data.results, event.target.value); 
-  printingAllCards(speciesCards); 
+  const speciesCards = filter(data.results, event.target.value);
+  printingAllCards(speciesCards);
   })
 
 // FILTRAGEM POR STATUS
