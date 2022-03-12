@@ -24,4 +24,6 @@ export const ordination = (characters, order) => {
 export const average = (total, portion) => {
   const averageCalculation = Math.round((portion * 100 / total))
   return averageCalculation
+
 }
+

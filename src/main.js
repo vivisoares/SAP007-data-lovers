@@ -7,7 +7,7 @@ const printingAllCards = (characters) => {
   for (let character of characters) {
     showingCards += character = `<dl class="cards">
     <img src="${character.image}" class="image-card">
-    <dt class="p-name-card">${character.name}</dt>
+    <dt class="name-card">${character.name}</dt>
     <dd class="p-card">Status: ${character.status}</dd>
     <dd class="p-card">Especie: ${character.species}</dd>
     <dd class="p-card">Gênero: ${character.gender}</dd>

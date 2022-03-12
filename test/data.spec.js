@@ -85,10 +85,13 @@ describe('function ordination()', () => {
       expect(typeof average).toBe('function');
     });
 
-    it('filtrar porcentagem de categoria humana', () => {
-      const specieHuman = 'Human'
-      const expected = filter(personagens, specieHuman)
-      expect (expected.length).toEqual(1)
-      expect(expected).toEqual('averageCalculation');
+    it('filtrar porcentagem de personagens categoria humana - 25%', () => {
+    const expected = average(personagens.length, 1)
+      expect (expected).toEqual(25);
+    });
+
+  it('filtrar porcentagem de personagens com status Dead - 50%', () => {
+    const expected = average(personagens.length, 2)
+      expect (expected).toEqual(50);
     });
   });
