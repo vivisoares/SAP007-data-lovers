@@ -1,4 +1,4 @@
-*{  margin: 0;}    /* ZEREI MARGENS */
+*{  margin: 0;}
 
 body{
     font-size: 1.0em;
@@ -22,7 +22,7 @@ body{
 }
 .navbar a {
   float: left;
-  color: #8b3986; 
+  color: #8b3986;
   text-decoration: none;
   font-weight: 600;
   padding: 15px;
@@ -36,14 +36,12 @@ body{
   color: #8b3986;
 }
 
-
 /* BANNER */
 .image-bg{
   width: 100%;
   border-bottom: 5px solid #4e29;
   border-top: 4px solid #f0e948;
 }
-
 
 .labelCatalogue{
   text-align: center;
@@ -54,13 +52,32 @@ body{
   margin-top: 0.5em;
 }
 
-/* CONTAINER */
-#container {
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-bg {
   width: 100%;
-  padding-bottom: 1%;
-  padding-top: 1%;
-  align-self: center;
-  display: inline-flex;
+  height: auto;
+}
+
+.search{
+display: block;
+}
+
+/* CONTAINER */
+
+#container{
+  display: flex;
+  padding: 20px 20px;
+  justify-content:space-around;
+  flex-direction: row;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  display: flex;
   font-size: 1em;
   background-color: #f0e948;
   margin-bottom: 1em;
@@ -70,8 +87,9 @@ body{
   text-align: center;
   font-style: italic;
   font-size: 1.2em;
-  margin-left: 12%;
-} 
+  display: inline;
+}
+
 .selectorButton{
   font-size: 1em;
   margin-left: 0.5em;
@@ -88,10 +106,12 @@ body{
 }
 
 /* CARDS */
+
 .image-card{
   width: 200px;
   height: 200px;
 }
+
 .p-card{
   font-size: 0.7em;
 }
@@ -105,33 +125,60 @@ body{
   width: 90vw;
   margin: auto;
 }
-.cards {
+
+.cards{
   display: inline-table;
-  padding: 9px;
+  padding: 5px;
   margin: 0 10px 20px 10px;
   background-color: white;
-  border-color: #0adcde;
-  border-style: groove;
-  height: 300px;
-  width: 200px;
+  /* border-color: #0adcde;
+  border-style: groove; */
+  height: 18.75em;
+  width: 12.5em;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 
-@media (max-width: 600px) {
+@media (min-width: 300px) and (max-width: 600px) {
   .row {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
+
   .navbar a {
     float: none;
     display: block;
   }
-  #demo{
+  .active {
+    background-color: #0adcde;
+  }
+  .center {
+    font-size: 0.8em;
+    top: 35%;
+    transform: translate(-50%, -50%);
+  }
+  .filterName {
+    font-size: 0.6;
+  }
+
+  .selectorButton{
+    font-size: 0.6em;
+  }
+
+  .labelCatalogue{
+    font-size: 0.6em;
+  }
+  #container{
+    font-size: 0.8em;
+  }
+
+  #cardsBoard{
     text-align: center;
   }
+
   #container {
     text-align: center;
-    max-width: 45%;
 }}
+
+

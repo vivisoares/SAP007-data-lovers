@@ -1,20 +1,20 @@
 import data from "./data/rickandmorty/rickandmorty.js";
-import {filter, ordination, average } from './data.js'; 
+import {filter, ordination, average } from './data.js';
 
 // EXIBIR OS CARDS
 const printingAllCards = (characters) => {
-  let showingCards = ""; 
+  let showingCards = "";
   for (let character of characters) {
     showingCards += character = `<dl class="cards">
     <img src="${character.image}" class="image-card">
-    <dt class="p-name-card">${character.name}</dt>
+    <dt class="name-card">${character.name}</dt>
     <dd class="p-card">Status: ${character.status}</dd>
     <dd class="p-card">Especie: ${character.species}</dd>
     <dd class="p-card">Gênero: ${character.gender}</dd>
     <dd class="p-card">Origen: ${character.origin.name}</dd>
     </dl>`;
   }
-  document.getElementById("cardsBoard").innerHTML = showingCards; 
+  document.getElementById("cardsBoard").innerHTML = showingCards;
 }
 printingAllCards(data.results);
 
@@ -22,9 +22,9 @@ printingAllCards(data.results);
 const speciesFilter = document.getElementById("species");
 speciesFilter.addEventListener("change", function (event){
 
-  const speciesCards = filter(data.results, event.target.value); 
-  averageCalculation.innerHTML = `Essa categoria representa ${average(data.results.length, speciesCards.length)}% de todos os personagens`
-  printingAllCards(speciesCards); 
+  const speciesCards = filter(data.results, event.target.value);
+  document.getElementById("averageCalculation").innerHTML = `Essa categoria representa ${average(data.results.length, speciesCards.length)}% de todos os personagens`
+  printingAllCards(speciesCards);
 
   })
 
@@ -33,7 +33,7 @@ speciesFilter.addEventListener("change", function (event){
   statusFilter.addEventListener("change", function (event){
 
     const statusCards = filter(data.results, event.target.value);
-    averageCalculation.innerHTML = `Essa categoria representa ${average(data.results.length, statusCards.length)}% de todos os personagens`
+    document.getElementById("averageCalculation").innerHTML = `Essa categoria representa ${average(data.results.length, statusCards.length)}% de todos os personagens`
     printingAllCards(statusCards);
   })
 
@@ -46,4 +46,3 @@ ordinationAz.addEventListener("change", function(event){
   printingAllCards(characters);
   })
 
-// VALOR AGREGADO
