@@ -1,10 +1,19 @@
-*{  margin: 0;}    /* ZEREI MARGENS */
+*{  margin: 0;}
 
 body{
     font-size: 1.0em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #DEEFE7;
-    overflow: hidden;
+
+}
+footer {
+  padding: 1%;
+  text-align: center;
+  background-color: #f0e948;
+  font-weight: 600;
+}
+footer a{
+  text-decoration-line: none;
 }
 
 .border{
@@ -23,7 +32,6 @@ body{
   list-style:none;
   background-color:  #0adcde;
   overflow: auto;
-
 }
 
 .navbar a {
@@ -33,7 +41,6 @@ body{
   font-weight: 600;
   padding: 15px;
   text-align: center;
-
 }
 
 .navbar a:hover {
@@ -54,7 +61,7 @@ body{
   border-top: 4px solid #f0e948;
 }
 
-/* FLEXBOX  aqui é tela cheia*/
+/* FLEXBOX */
 
 .row{
   display: flex;
@@ -62,20 +69,24 @@ body{
   justify-content: space-between;
 }
 
-/* FLEXBOX  aqui é tela celular*/
 
-@media (max-width: 600px) {
-  .row {
-  }
+@media (min-width: 300px) and (max-width: 600px) {
 
   .navbar a {
     float: none;
     display: block;
   }
 
+  .active {
+    background-color: #0adcde;
+  }
+  footer{
+    font-size: 0.8em;
+  }
+
   .image {
-    width: 40%;
-    padding-left: 35%;
+    width: 4em;
+
   }
 
 }

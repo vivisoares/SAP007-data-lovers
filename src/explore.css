@@ -9,6 +9,16 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+footer {
+  padding: 1%;
+  text-align: center;
+  background-color: #f0e948;
+  font-weight: 600;
+}
+footer a{
+  text-decoration-line: none;
+}
+
 .border{
   padding: 0% 5%;
   list-style: none;
@@ -52,20 +62,23 @@ body{
   margin-top: 0.5em;
 }
 
+.box{
+  position: relative;
+}
+
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: whitesmoke;
+  text-align: center;
 }
 
 .image-bg {
   width: 100%;
   height: auto;
-}
-
-.search{
-display: block;
 }
 
 /* CONTAINER */
@@ -95,15 +108,6 @@ display: block;
   margin-left: 0.5em;
 }
 
-.center {
-  font-size: 2em;
-  text-align: center;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  color: whitesmoke;
-  transform: translate(-50%, -50%);
-}
 
 /* CARDS */
 
@@ -155,11 +159,14 @@ display: block;
   }
   .center {
     font-size: 0.8em;
-    top: 35%;
+
     transform: translate(-50%, -50%);
   }
   .filterName {
     font-size: 0.6;
+  }
+  footer{
+    font-size: 0.8em;
   }
 
   .selectorButton{

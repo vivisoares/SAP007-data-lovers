@@ -2,16 +2,54 @@
 
 body{
     font-size: 1.0em;
-    background-image: url(img/videos.png);
-    background-repeat:no-repeat;
+    background-color: 461e6a;
     height: 100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow:hidden;
 }
 
 .border{
   padding: 0% 5%;
   list-style: none;
+}
+.bg{
+  width: 100%;
+}
+
+.container {
+  position: relative;
+}
+h1{
+  font-size: 2.5em;
+  color: whitesmoke;
+}
+.platform {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+
+}
+
+footer {
+  padding: 1%;
+  text-align: center;
+  background-color: #f0e948;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+}
+
+footer a{
+  text-decoration-line: none;
 }
 
 /* NAVBAR */
@@ -55,18 +93,23 @@ body{
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-
+  body{
+    width: 100%;
+  }
+  .active {
+    background-color: #0adcde;
+  }
   .navbar a {
     float: none;
     display: block;
   }
-
-  #demo{
-    text-align: center;
+  footer{
+    font-size: 0.8em;
+    position: relative;
   }
 
-  #container {
-    text-align: center;
+  h1{
+    font-size: 1.5em;
   }
 
   .image {
