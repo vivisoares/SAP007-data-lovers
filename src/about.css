@@ -1,10 +1,21 @@
-*{  margin: 0;}    /* ZEREI MARGENS */
+*{  margin: 0;}
 
 body{
     font-size: 1.0em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(img/wallpaper.png);
     background-repeat:repeat;
+}
+
+footer {
+  padding: 1%;
+  text-align: center;
+  background-color: #f0e948;
+  font-weight: 600;
+}
+
+footer a{
+  text-decoration-line: none;
 }
 
 .border{
@@ -56,16 +67,6 @@ body{
 
 /* CONTEUDO */
 
-section {
-  display: inline-flex;
-  width: 90%;
-  margin: 4%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  text-align: justify;
-}
-
 .title {
   font-size: 1.5em;
   margin-bottom: 1%;
@@ -83,22 +84,20 @@ section {
 .aboutTheShow{
   background-color: #f7e8fa;
   border-radius: 10px;
-  font-size: 1em;
   text-align: justify;
+  padding: 0% 4% 3% 4%;
   margin: 2px;
-  padding: 0% 4% 2% 4%;
-  float: left;
   border: transparent thin solid;
 }
+
 
 .imgaboutTheShow{
   border-radius: 20px;
   margin-right: 4%;
-  margin-top: 1%;
   float: left;
   border: #0adcde;
   border-style:groove;
-
+  /* width: 40%; */
 }
 
  .aboutTheShow img{
@@ -116,18 +115,16 @@ section {
     float: none;
     display: block;
   }
-
-  #demo{
-    text-align: center;
+  .active {
+    background-color: #0adcde;
   }
-
-  #container {
-    text-align: center;
+  footer{
+    font-size: 0.8em;
   }
 
   .aboutTheShow{
-    padding-bottom: 2%;
-    padding-right: 2%;
+    padding-top: 3%;
+    padding-right: 4%;
   }
 
 }
