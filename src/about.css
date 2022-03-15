@@ -27,14 +27,10 @@ footer a{
   text-align: center;
 }
 
-
-/* NAVBAR */
-
 .navbar {
   list-style:none;
   background-color:  #0adcde;
   overflow: auto;
-
 }
 
 .navbar a {
@@ -44,7 +40,6 @@ footer a{
   font-weight: 600;
   padding: 15px;
   text-align: center;
-
 }
 
 .navbar a:hover {
@@ -56,16 +51,11 @@ footer a{
   color: #8b3986;
 }
 
-
-/* BANNER */
-
 .image-bg{
     width: 100%;
     border-bottom: 5px solid #4e29;
     border-top: 4px solid #f0e948;
-  }
-
-/* CONTEUDO */
+}
 
 .title {
   font-size: 1.5em;
@@ -90,20 +80,17 @@ footer a{
   border: transparent thin solid;
 }
 
-
 .imgaboutTheShow{
   border-radius: 20px;
   margin-right: 4%;
   float: left;
   border: #0adcde;
   border-style:groove;
-  /* width: 40%; */
 }
 
  .aboutTheShow img{
   max-width: 45%;
 }
-
 
 @media (max-width: 600px) {
   .row {
@@ -115,9 +102,11 @@ footer a{
     float: none;
     display: block;
   }
+
   .active {
     background-color: #0adcde;
   }
+
   footer{
     font-size: 0.8em;
   }
@@ -126,5 +115,4 @@ footer a{
     padding-top: 3%;
     padding-right: 4%;
   }
-
 }

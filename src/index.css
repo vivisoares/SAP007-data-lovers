@@ -25,9 +25,6 @@ footer a{
   text-align: center;
 }
 
-
-/* NAVBAR */
-
 .navbar {
   list-style:none;
   background-color:  #0adcde;
@@ -52,23 +49,17 @@ footer a{
   color: #8b3986;
 }
 
-
-    /* BANNER */
-
 .banner-ram{
   width: 100%;
   border-bottom: 5px solid #4e29;
   border-top: 4px solid #f0e948;
 }
 
-/* FLEXBOX */
-
 .row{
   display: flex;
   padding: 0% 4%;
   justify-content: space-between;
 }
-
 
 @media (min-width: 300px) and (max-width: 600px) {
 
@@ -80,13 +71,12 @@ footer a{
   .active {
     background-color: #0adcde;
   }
+
   footer{
     font-size: 0.8em;
   }
 
   .image {
     width: 4em;
-
   }
-
 }

@@ -4,6 +4,7 @@ body{
     font-size: 1.0em;
     background-image: url(img/videos.png);
     background-repeat:no-repeat;
+    background-size: cover;
     height: 100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
