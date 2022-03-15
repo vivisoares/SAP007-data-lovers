@@ -133,10 +133,10 @@ footer a{
 .cards{
   display: inline-table;
   padding: 5px;
-  margin: 0 10px 20px 10px;
+  margin: 5px 10px 20px 19px;
   background-color: white;
-  /* border-color: #0adcde;
-  border-style: groove; */
+  border-color: #9fe1e2;
+  border-style: groove;
   height: 18.75em;
   width: 12.5em;
   border-radius: 5px;
