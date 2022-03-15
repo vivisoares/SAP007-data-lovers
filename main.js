@@ -1,7 +1,7 @@
 import data from "./data/rickandmorty/rickandmorty.js";
 import { filter, ordination, average } from './data.js';
 
-// EXIBIR OS CARDS
+const allData = data.results
 const printingAllCards = (characters) => {
   let showingCards = "";
   for (let character of characters) {
@@ -17,8 +17,6 @@ const printingAllCards = (characters) => {
   document.getElementById("cardsBoard").innerHTML = showingCards;
 }
 printingAllCards(allData);
-
-const allData = data.results
 
 const speciesFilter = document.getElementById("species");
 speciesFilter.addEventListener("change", function (event) {
