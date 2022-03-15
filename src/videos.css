@@ -2,7 +2,8 @@
 
 body{
     font-size: 1.0em;
-    background-color: 461e6a;
+    background-image: url(img/videos.png);
+    background-repeat:no-repeat;
     height: 100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,29 +14,17 @@ body{
   padding: 0% 5%;
   list-style: none;
 }
+
 .bg{
   width: 100%;
 }
 
-.container {
-  position: relative;
-}
 h1{
-  font-size: 2.5em;
+  font-size: 1.7em;
   color: whitesmoke;
-}
-.platform {
-  position: absolute;
-  top: 30%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
   text-align: center;
-}
-
-img {
-  width: 100%;
-
+  margin-left: 30%;
+  margin-top: 5%;
 }
 
 footer {
@@ -86,6 +75,19 @@ footer a{
   border-bottom: 5px solid rgb(68, 238, 34);
   border-top: 4px solid #f0e948;
 }
+
+.watch {
+  max-width: 20%;
+  margin-left: 55%;
+  margin-bottom: 0;
+}
+/* 
+.toWatch {
+  background-position: 0%;
+  margin-top: ;
+  margin-left: 10%;
+  padding: 0;
+} */
 
 
 @media (max-width: 600px) {
